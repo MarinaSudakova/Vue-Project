@@ -92,3 +92,213 @@ a {
         }
     }
 }
+
+.tagline {
+    background-color: #fff;
+    padding-bottom: 96px;
+    height: 760px;
+
+
+    &__content {
+        background-image: url("../Images/Homepagemain.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        border-radius: 7%;
+        display: flex;
+        align-items: center;
+        justify-content: start;
+        gap: 10px;
+        height: 100%;
+
+        &__txt {
+            display: flex;
+            flex-direction: column;
+            align-content: space-between;
+            width: 40%;
+            padding-left: 52px;
+            gap: 20px;
+        }
+
+        &__button {
+            width: 40%;
+            padding: 1.5rem;
+            border-radius: 18px;
+            box-shadow: 0px 10px 20px 0px rgba(192, 192, 192, 0.35);
+            background: rgb(41, 47, 54);
+            color: rgb(255, 255, 255);
+            font-family: Jost;
+            font-size: 18px;
+            font-weight: 600;
+            line-height: 125%;
+            letter-spacing: 2%;
+            text-align: center;
+            border: none;
+        }
+
+        &__arrow {
+            width: 14px;
+            padding-left: 10px;
+        }
+    }
+
+    &__txt1 {
+
+        // @extend %taglineTextStyle;
+        color: rgb(41, 47, 54);
+        // font-family: DM Serif Display;
+        font-size: 65px;
+        font-weight: 400;
+        line-height: 125%;
+        letter-spacing: 0%;
+        text-align: left;
+    }
+
+    &__txt2 {
+        // @extend %taglineTextStyle;
+        color: rgb(77, 80, 83);
+        // font-family: Jost;
+        font-size: 22px;
+        font-weight: 400;
+        line-height: 150%;
+        letter-spacing: 1%;
+        text-align: left;
+    }
+
+
+}
+
+.katalog {
+
+    &__top {
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 108px;
+
+        &__title {
+            text-align: center;
+            color: rgb(41, 47, 54);
+            // font-family: DM Serif Display;
+            font-size: 50px;
+            font-weight: 400;
+            line-height: 125%;
+            letter-spacing: 2%;
+            text-align: center;
+        }
+
+        &__subtitle {
+            text-align: center;
+            color: rgb(77, 80, 83);
+            // font-family: Jost;
+            font-size: 22px;
+            font-weight: 400;
+            line-height: 150%;
+            letter-spacing: 1%;
+            text-align: center;
+        }
+    }
+
+    &__middle {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+}
+
+.miditem {
+    display: flex;
+    background-color: #FFF;
+    width: ($standartWidth - $gapKatalog*8)/2;
+    margin-bottom: 50px;
+
+    &__container {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+
+        &__caption {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        &__link {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            box-sizing: border-box;
+        }
+
+        &_img {
+            width: 100%;
+            height: 425px;
+            overflow: hidden;
+            object-fit: cover;
+        }
+
+        &__title {
+            color: rgb(41, 47, 54);
+            // font-family: DM Serif Display;
+            font-size: 25px;
+            font-weight: 400;
+            line-height: 125%;
+            letter-spacing: 2%;
+            text-align: left;
+        }
+
+        &__txt {
+            color: rgb(77, 80, 83);
+            // font-family: Jost;
+            font-size: 22px;
+            font-weight: 400;
+            line-height: 150%;
+            letter-spacing: 1%;
+            text-align: left;
+        }
+
+
+    }
+
+    &__button {
+        display: flex;
+        align-items: center;
+
+        &__inside {
+            border-radius: 50%;
+            background: rgb(244, 240, 236);
+            width: 50px;
+            height: 50px;
+            border: none;
+        }
+
+        &__inside:hover {
+            border: 1px solid blue;
+        }
+
+        // &__arrow{
+
+        // }
+    }
+}
+
+.left-first {
+    border-radius: 0% 20% 0% 0%;
+}
+
+.left-second {
+    border-radius: 0% 0% 20% 0%;
+
+}
+
+.right-second {
+    border-radius: 0% 0% 0% 20%;
+
+}
+
+.right-first {
+    border-radius: 20% 0% 0% 0%;
+
+}
