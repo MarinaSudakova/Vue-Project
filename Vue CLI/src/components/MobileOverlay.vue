@@ -1,4 +1,5 @@
 <template>
+  <div>
     <dialog class="mobile-overlay visible-mobile" id="mobileOverlay">
       <form class="mobile-overlay__close-button-wrapper" method="dialog">
         <button class="mobile-overlay__close-button cross-button" type="submit">
@@ -13,6 +14,7 @@
         </ul>
       </div>
     </dialog>
+  </div>
   </template>
   
   <script>

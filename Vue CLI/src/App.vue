@@ -1,16 +1,16 @@
 <template>
-    <HomePage />
-  </template>
-  
-  <script>
-  import HomePage from './pages/HomePage.vue'
-  
-  export default {
-    name: 'App',
-    components: {
-      HomePage
-    }
+  <CategoryPage />
+</template>
+
+<script>
+import CategoryPage from './pages/CategoryPage.vue'
+
+export default {
+  name: 'App',
+  components: {
+    CategoryPage
   }
-  </script>
-  
-  <style lang="scss"></style>
+}
+</script>
+
+<style lang="scss"></style>
