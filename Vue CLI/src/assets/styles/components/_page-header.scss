@@ -17,6 +17,20 @@
         background-size: cover;
     }
 
+    &__project-details-bg {
+        background-image: url('@/assets/img/project_details.jpeg');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+
+    &__category-bg {
+        background-image: url('@/assets/img/category.jpeg');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+
     &__body {
         position: absolute;
         bottom: 0;

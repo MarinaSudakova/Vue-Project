@@ -1,14 +1,14 @@
 <template>
-  <CategoryPage />
+  <ProjectDetails />
 </template>
 
 <script>
-import CategoryPage from './pages/CategoryPage.vue'
+import ProjectDetails from './pages/ProjectDetails.vue'
 
 export default {
   name: 'App',
   components: {
-    CategoryPage
+    ProjectDetails
   }
 }
 </script>

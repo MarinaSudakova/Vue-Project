@@ -1,16 +1,15 @@
 .modern {
     &__list {
-        column-gap: 100px;
-        row-gap: 56px;
+        column-count: 2;
 
         @include desktop {
-            column-gap: 50px;
-            row-gap: 26px;
+            gap: 20px;
+            column-count: 1;
         }
 
         @include mobile {
-            column-gap: 20px;
-            row-gap: 16px;
+            gap: 16px;
+            column-count: 1;
         }
     }
 
@@ -18,7 +17,9 @@
         overflow: hidden;
         display: flex;
         justify-content: center;
+    }
 
+    &__rounded {
         &:first-child article img {
             border-top-right-radius: var(--button-arrow-large);
         }
