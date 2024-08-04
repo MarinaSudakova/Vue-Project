@@ -1,14 +1,14 @@
 <template>
-  <ProjectDetails />
+  <BasicLayout />
 </template>
 
 <script>
-import ProjectDetails from './pages/ProjectDetails.vue'
+import BasicLayout from './layouts/BasicLayout.vue'
 
 export default {
   name: 'App',
   components: {
-    ProjectDetails
+    BasicLayout
   }
 }
 </script>

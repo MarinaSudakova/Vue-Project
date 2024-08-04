@@ -1,26 +1,21 @@
 <template>
-  <BasicLayout>
-    <template #main-content>
-      <HeaderPage class="page-header__category-bg" :pageHeader="pageHeader" />
+  <HeaderPage class="page-header__category-bg" :pageHeader="pageHeader" />
 
-      <SectionContent :showPagination="true" :showTabsList="true">
-        <template #tabList
-          ><TabsList
-            @filter-category="filterByCategory"
-            :category="category"
-            :selectedTabs="projects.selectedTabs"
-        /></template>
+  <SectionContent :showPagination="true" :showTabsList="true">
+    <template #tabList
+      ><TabsList
+        @filter-category="filterByCategory"
+        :category="category"
+        :selectedTabs="projects.selectedTabs"
+    /></template>
 
-        <ModernList :modern_card="filteredProjects" />
+    <ModernList :modern_card="filteredProjects" />
 
-        <template #paginate><PaginatesList :paginates="paginates" /></template>
-      </SectionContent>
-    </template>
-  </BasicLayout>
+    <template #paginate><PaginatesList :paginates="paginates" /></template>
+  </SectionContent>
 </template>
 
 <script>
-import BasicLayout from '../layouts/BasicLayout.vue'
 import SectionContent from '../components/SectionContent.vue'
 import HeaderPage from '../components/HeaderPage.vue'
 import PaginatesList from '../components/PaginatesList.vue'
@@ -32,7 +27,6 @@ import { mapState, mapGetters, mapActions } from 'vuex'
 export default {
   name: 'CategoryPage',
   components: {
-    BasicLayout,
     SectionContent,
     HeaderPage,
     PaginatesList,

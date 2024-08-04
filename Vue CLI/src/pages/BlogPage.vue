@@ -1,23 +1,18 @@
 <template>
-  <BasicLayout>
-    <template #main-content>
-      <HeaderPage class="page-header__blog-bg" :pageHeader="pageHeader" />
+  <HeaderPage class="page-header__blog-bg" :pageHeader="pageHeader" />
 
-      <SectionContent subtitle="Последний пост">
-        <NewView :new_post="newsPost" />
-      </SectionContent>
+  <SectionContent subtitle="Последний пост">
+    <NewView :new_post="newsPost" />
+  </SectionContent>
 
-      <SectionContent subtitle="Статьи & Новости" :showPagination="true">
-        <NewsList :news_card="newsCards" />
+  <SectionContent subtitle="Статьи & Новости" :showPagination="true">
+    <NewsList :news_card="newsCards" />
 
-        <template #paginate><PaginatesList :paginates="paginates" /></template>
-      </SectionContent>
-    </template>
-  </BasicLayout>
+    <template #paginate><PaginatesList :paginates="paginates" /></template>
+  </SectionContent>
 </template>
 
 <script>
-import BasicLayout from '../layouts/BasicLayout.vue'
 import SectionContent from '../components/SectionContent.vue'
 import NewsList from '../components/NewsList.vue'
 import NewView from '../components/NewView.vue'
@@ -29,7 +24,6 @@ import { mapState } from 'vuex'
 export default {
   name: 'BlogPage',
   components: {
-    BasicLayout,
     SectionContent,
     HeaderPage,
     NewView,

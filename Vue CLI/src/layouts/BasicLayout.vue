@@ -1,49 +1,39 @@
 <template>
-  <BasicLayout>
-    <template #main-content>
-      <HeaderPage class="page-header__project-bg" />
+  <HeaderLayout :menubar="menubar" />
 
-      <SectionContent :isColumn="true" :showTags="true">
-        <PostsList :posts="filteredPosts" />
+  <slot name="main-content">
+    <router-view />
+  </slot>
 
-        <template #tag>
-          <TagsList @filter-tag="filterByTag" :tags="tags" :selectedTag="posts.selectedTag" />
-        </template>
-      </SectionContent>
-    </template>
-  </BasicLayout>
+  <FooterLayout :menubar="menubar" />
+
+  <MobileOverlay :menubar="menubar" />
 </template>
 
 <script>
-import BasicLayout from '../layouts/BasicLayout.vue'
-import SectionContent from '../components/SectionContent.vue'
-import HeaderPage from '../components/HeaderPage.vue'
-import PostsList from '../components/PostsList.vue'
-import TagsList from '../components/TagsList.vue'
-
-import { mapState, mapGetters, mapActions } from 'vuex'
+import HeaderLayout from '@/components/HeaderLayout.vue'
+import FooterLayout from '@/components/FooterLayout.vue'
+import MobileOverlay from '@/components/MobileOverlay.vue'
 
 export default {
-  name: 'ProjectPage',
+  name: 'BasicLayout',
+  data() {
+    return {
+      menubar: {
+        menuItems: [
+          { label: 'Домой', link: './' },
+          { label: 'Проект', link: './project' },
+          { label: 'Блог', link: './blog' }
+        ]
+      }
+    }
+  },
   components: {
-    BasicLayout,
-    SectionContent,
-    HeaderPage,
-    PostsList,
-    TagsList
-  },
-  computed: {
-    ...mapState('ProjectPage', ['posts']),
-    ...mapGetters('ProjectPage', ['tags', 'filteredPosts'])
-  },
-  created() {
-    this.setCurrentArticle(this.posts.articles[0])
-  },
-  emits: ['filter-tag'],
-  methods: {
-    ...mapActions('ProjectPage', ['filterByTag', 'setCurrentArticle'])
+    HeaderLayout,
+    FooterLayout,
+    MobileOverlay
   }
 }
 </script>
 
-<style lang="scss"></style>
+<style scoped lang="scss"></style>

@@ -1,11 +1,12 @@
 <template>
-    <div class="hero hero-bg">
-      <div class="hero__body">
-        <h2 class="hero__title">Пусть ваш дом будет уникальным</h2>
-        <div class="hero__description">
-          <p>Существует много вариаций Lorem Ipsum, которые можно использовать</p>
-        </div>
-        <ButtonBlacked class="hero__button">
+  <div class="hero hero-bg">
+    <div class="hero__body">
+      <h2 class="hero__title">Пусть ваш дом будет уникальным</h2>
+      <div class="hero__description">
+        <p>Существует много вариаций Lorem Ipsum, которые можно использовать</p>
+      </div>
+      <router-link to="/project"
+        ><ButtonBlacked class="hero__button">
           <span>Начать</span>
           <svg
             class="hero__arrow"
@@ -21,21 +22,21 @@
               stroke-linejoin="round"
               d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"
             />
-          </svg>
-        </ButtonBlacked>
-      </div>
+          </svg> </ButtonBlacked
+      ></router-link>
     </div>
-  </template>
-  
-  <script>
-  import ButtonBlacked from '@/components/ButtonBlacked.vue'
-  
-  export default {
-    name: 'HeroMain',
-    components: {
-      ButtonBlacked
-    }
+  </div>
+</template>
+
+<script>
+import ButtonBlacked from '@/components/ButtonBlacked.vue'
+
+export default {
+  name: 'HeroMain',
+  components: {
+    ButtonBlacked
   }
-  </script>
-  
-  <style scoped lang="scss"></style>
+}
+</script>
+
+<style scoped lang="scss"></style>
